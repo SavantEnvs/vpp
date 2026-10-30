@@ -1,0 +1,10 @@
+# Prune untracked build products from the build context. .git is deliberately kept: the image holds the
+# full repository history (SPEC 6.2 item 2) and the version fallback in build.sh only applies without it.
+build-root/build-*
+build-root/install-*
+build-root/.ccache
+build-root/tools
+build-root/packages-vpp
+build-root/test
+**/__pycache__
+**/*.pyc
