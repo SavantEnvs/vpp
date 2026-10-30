@@ -1,0 +1,9 @@
+project: savantenvs/vpp
+target: fuzz_macros
+testsuite:
+  - url: https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_macros/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_macros
+    libfuzzer: true
+    timeout: 10

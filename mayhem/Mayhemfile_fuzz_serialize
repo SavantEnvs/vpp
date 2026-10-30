@@ -1,0 +1,9 @@
+project: savantenvs/vpp
+target: fuzz_serialize
+testsuite:
+  - url: https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_serialize/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_serialize
+    libfuzzer: true
+    timeout: 10

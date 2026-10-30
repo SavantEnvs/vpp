@@ -1,0 +1,9 @@
+project: savantenvs/vpp
+target: fuzz_unformat
+testsuite:
+  - url: https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_unformat/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_unformat
+    libfuzzer: true
+    timeout: 10
